@@ -11,10 +11,13 @@ import productsContainer from './products/products';
 import productsReducer from './products/products.reducer';
 import contactContainer from './contact/contact';
 import contactReducer from './contact/contact.reducer';
+import adminContainer from './admin/admin';
+import adminReducer from './admin/admin.reducer';
 
 const reducer = Redux.combineReducers({
   products: productsReducer,
-  contact: contactReducer
+  contact: contactReducer,
+  admin: adminReducer
 })
 
 const store = Redux.createStore(
@@ -43,7 +46,8 @@ ReactDOM.render(
       <Route path="/" component={AppLayoutContainer}>
       <IndexRoute component={AppLayoutContainer}/>
       <Route path="/products" component={productsContainer}/>
-      <Route path="contact" component="{contactcontainer}"/>
+      <Route path="/contact" component={contactContainer}/>
+      <Route path="/admin123" component={adminContainer}/>
       
       </Route>
     </Router>
